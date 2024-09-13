@@ -1,0 +1,436 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .news-cards {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .news-card {
+    flex: 1;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .subscribe input {
+    padding: 8px;
+    margin-right: 10px;
+  }
+  
+  .subscribe button {
+    padding: 8px 15px;
+  }
+  
+  
+  @media only screen and (max-width: 768px) {
+    .header .nav ul {
+      display: block;
+      text-align: center;
+    }
+  
+    .news-cards {
+      flex-direction: column;
+    }
+  }
+  ul, li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+
+
+  /* Header Styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #e00a0a;
+  }
+  
+  header .nav-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  header .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  
+  header .nav-links a:hover {
+    color: #e00a0a;
+  }
+  .user-section > a {
+    padding-right: 20px;
+    }
+    .user-section a:hover {
+        color: #e00a0a;
+      }
+  
+  /* Mobile Header Optimization */
+  @media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      padding: 10px 20px;
+    }
+  
+    header .nav-links {
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+    }
+  }
+  
+
+
+  /* Menu Styling */
+ /* Base navigation styles for parent categories */
+.header .nav .parent-menu {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+/* Parent list item - relative positioning */
+.menu ul li {
+  position: relative; /* Ensure relative positioning so submenu aligns under the parent */
+  padding: 15px 20px;
+}
+
+/* Parent link styles */
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Submenu hidden by default */
+.menu .submenu {
+  display: none; /* Hide submenu initially */
+  position: absolute; /* This ensures the submenu is positioned absolutely relative to the parent */
+  top: 100%; /* Place the submenu directly under the parent */
+  left: 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1; /* Ensure the submenu appears on top of other elements */
+}
+
+/* Show submenu on hover */
+.menu ul li:hover > .submenu {
+  display: block; /* Display the submenu when hovering over the parent */
+}
+
+/* Submenu item styles */
+.menu .submenu li {
+  padding: 10px;
+}
+
+/* Submenu link hover styles */
+.menu .submenu li:hover a {
+  color: red;
+}
+
+/* Hover effect for parent items */
+.menu ul li:hover > a {
+  color: red;
+}
+
+/* Mobile Styles */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 25px;
+}
+
+.hamburger .bar {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.menu.active {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: flex;
+  }
+
+  .menu ul li {
+    padding: 10px 0;
+  }
+
+  .menu ul li:hover .submenu {
+    display: none;
+  }
+}
+button.logout {
+  padding: 7px 19px;
+  color: #fff;
+  background: red;
+  border: 0;
+  border-radius: 2px;
+  margin: 10px;
+}
+.search-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background-color: #b30000;
+}
+
+  
+
+  /* Footer Styling */
+  .parent-menu-footer {
+    display: flex;
+    gap: 25px;
+    margin: 50px;
+  }
+  .parent-menu-footer li a {
+    color: black;
+    /* text-align: center; */
+}
+ul.submenu-footer {
+  margin: 10px 0;
+}
+.submenu-footer li {
+  margin: 10px 0;
+  position: relative;
+  padding-left: 15px;
+}
+.submenu-footer li::before {
+  content: '•'; /* Bullet point character */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 20px; /* Size of the bullet point */
+  color: black; /* Color of the bullet point */
+}
+footer {
+    background-color: #ffffff;
+    color: #000;
+    padding: 40px 30px;
+    /* text-align: center; */
+  }
+  
+  footer .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .parent-menu-footer li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+  }
+  .submenu-footer li a{
+    color: #000000;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  footer .footer-links a:hover {
+    color: #e00a0a;
+  }
+  
+  footer p {
+    font-size: 0.85rem;
+    color: #ccc;
+  }
+  
+  footer .social-icons {
+    margin-top: 20px;
+  }
+  
+  footer .social-icons a {
+    margin: 0 10px;
+    color: #fff;
+    font-size: 1.2rem;
+  }
+  
+  footer .social-icons a:hover {
+    color: #e00a0a;
+  }
+  footer .subscribe {
+    background-color: #F5F5F5;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 40px;
+  }
+  .subscribe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    gap: 10px;
+  }
+  
+  .subscribe .content {
+    flex: 1;
+  }
+  
+  .subscribe .content p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #888;
+    margin-bottom: 5px;
+  }
+  
+  .subscribe .content h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 5px 0;
+  }
+  
+  .subscribe .content h2 span {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .subscribe-form {
+    display: flex;
+    gap: 10px;
+    min-width: 40%;
+  }
+  
+  .subscribe-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    width: 50%;
+  }
+  
+  .subscribe-form button {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .subscribe-form button:hover {
+    background-color: darkred;
+  }
+  .footer-bottom {
+    text-align: center;
+  }
+  .red-color {
+    color: red;
+  } 
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .subscribe {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .subscribe-form {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .subscribe-form input {
+      width: calc(100% - 120px); /* Ensures input and button fit on smaller screens */
+    }
+  
+    .subscribe-form button {
+      width: 100px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+  
+    .subscribe-form button {
+      margin-top: 10px;
+    }
+  }
+  
+  
+  /* Mobile Footer Optimization */
+  @media (max-width: 768px) {
+    footer {
+      padding: 30px 20px;
+    }
+  
+    footer .footer-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    footer .social-icons a {
+      font-size: 1rem;
+    }
+  }
+  

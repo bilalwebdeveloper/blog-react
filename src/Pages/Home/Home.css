@@ -1,0 +1,233 @@
+.welcome-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    margin: 40px;
+  }
+  
+  .banner-content {
+    text-align: center;
+  }
+  
+  .welcome-banner p {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #888; /* Gray text color */
+    margin-bottom: 10px;
+  }
+  
+  .welcome-banner h1 {
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.5;
+    margin: 0;
+    color: #333; /* Darker text color */
+  }
+  
+  .icon {
+    font-size: 22px;
+  }
+  
+  .highlight {
+    color: red;
+    font-weight: bold;
+  }
+
+
+  /* Full size article css  */
+
+
+  /* General container setup */
+.content-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 40px;
+    gap: 7%;
+  }
+  
+  .image-container-half {
+    flex: 1;
+    min-width: 40%;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .content-container {
+    flex: 2;
+    margin-left: 20px;
+  }
+  
+  .content-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .netflix-logo {
+    width: 25px;
+    margin-right: 10px;
+  }
+  
+  .time-info {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .content-title {
+    font-size: 50px;
+    font-weight: 700;
+    margin: 0 0 10px;
+  }
+  
+  .content-description {
+    font-size: 22px;
+    color: #333;
+    line-height: 1.5;
+    margin: 20px 0;
+  }
+  
+  .content-footer {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .category {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .read-time {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* Mobile responsive design */
+  @media (max-width: 768px) {
+    .content-section {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .image-container-half {
+      max-width: 100%;
+      margin-bottom: 15px;
+    }
+  
+    .content-container {
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .content-title {
+      font-size: 20px;
+    }
+  
+    .content-description {
+      font-size: 14px;
+    }
+  
+    .category {
+      font-size: 14px;
+    }
+  
+    .read-time {
+      font-size: 10px;
+    }
+  }
+
+
+
+
+  /* full slider css */
+  .news-slider {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .latest-news-title {
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .news-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 10px;
+    height: 100%;
+  }
+  
+  .image-container {
+    width: 100%; 
+    height: 200px; 
+    border-radius: 8px;
+    overflow: hidden; 
+  }
+  
+  .news-image {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover;
+    border-radius: 8px; 
+  }
+  
+  .news-content {
+    flex: 1;
+    padding: 10px 0;
+  }
+  
+  .news-time-category {
+    font-size: 14px;
+    color: #ff0000;
+    margin-bottom: 5px;
+  }
+  
+  .news-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .news-description {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .news-readtime {
+    font-size: 14px;
+    color: #999;
+  }
+  
+  .see-all {
+    display: block;
+    text-align: right;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #e53935;
+    text-decoration: none;
+  }
+  
+  .see-all:hover {
+    text-decoration: underline;
+  }
+   
+  

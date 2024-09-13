@@ -1,0 +1,1 @@
+export { NEWS_API } from './api.call.js'
