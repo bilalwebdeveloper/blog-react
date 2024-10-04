@@ -117,10 +117,17 @@ export const NEWS_API = {
           data,
         });
       },
+      fetchSingleArticle(data) {
+        return NEWS_API.newsApi.request({
+          method: "GET",
+          url: `/articles/${data}`,
+          data,
+        });
+      },
       fetchArticlesByCategory(categoryId, page) {
         return NEWS_API.newsApi.request({
           method: "GET",
-          url: `/articles/${categoryId}`,
+          url: `articles/sub-categories/${categoryId}`,
           params: { page }
         });
       },
@@ -128,7 +135,7 @@ export const NEWS_API = {
       fetchArticles(page) {
         return NEWS_API.newsApi.request({
           method: "GET",
-          url: `/articles`,
+          url: `/articles/sub-categories`,
           params: { page }
         });
       },

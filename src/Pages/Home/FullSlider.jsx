@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Home.css"; // Your CSS file
@@ -40,17 +41,19 @@ const FullSlider = ({ newsData, title, seeAllLink }) => {
       <Slider {...settings}>
         {newsData.map((news, index) => (
             <div key={index} className="news-card">
-            <div className="image-container">
-                <img src={news.UrlToImage} alt={news.title} className="news-image" />
-            </div>
-            <div className="news-content">
-                <p className="news-time-category red-color">
-                {news.source} 
-                </p>
-                <h3 className="news-title">{news.title}</h3>
-                <p className="news-description">{news.description}</p>
-                <p className="news-readtime"><span className="red-color">{news.category}</span> • {news.published_at_human}</p>
-            </div>
+              <Link to={`/article/${news.id}`} style={{ textDecoration: 'none' }}>
+                <div className="image-container">
+                    <img src={news.UrlToImage} alt={news.title} className="news-image" />
+                </div>
+                <div className="news-content">
+                    <p className="news-time-category red-color">
+                    {news.source} 
+                    </p>
+                    <h3 className="news-title">{news.title}</h3>
+                    <p className="news-description">{news.description}</p>
+                    <p className="news-readtime"><span className="red-color">{news.category}</span> • {news.published_at_human}</p>
+                </div>
+              </Link>
             </div>
         ))}
        </Slider>

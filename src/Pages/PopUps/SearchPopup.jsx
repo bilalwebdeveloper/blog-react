@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import './SearchPopup.css'; // Import CSS for styling
 import { NEWS_API } from '../../api';
-
+import { Link } from 'react-router-dom';
 
 const SearchPopup = ({ isOpen, onClose }) => {
   const [query, setQuery] = useState('');
@@ -62,8 +62,9 @@ const SearchPopup = ({ isOpen, onClose }) => {
           <ul className="dropdown-menu">
             {results.map(result => (
               <li key={result.id}>
-                <h4>{result.title}</h4>
-                <p>{result.description}</p>
+                <Link to={`/article/${result.id}`} style={{ textDecoration: 'none' }} onClick={onClose}>
+                  <h4>{result.title}</h4>
+                </Link>
               </li>
             ))}
           </ul>

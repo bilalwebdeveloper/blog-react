@@ -16,6 +16,7 @@ const Home = () => {
       const response = await NEWS_API.endpoints.Home.FetchCategoriesArticles(); 
 
       if (response.status === 200) {
+        console.log(response.data);
         setNewsData(response.data); 
       } else {
         console.error(`Failed: ${response.statusText}`);
@@ -66,7 +67,7 @@ const Home = () => {
               key={index}
               newsData={news.articles} 
               title={news.parent_category} 
-              seeAllLink="/all-news" 
+              seeAllLink={`/categories/${news.parent_id}`}
             />
           ))
         )}

@@ -6,6 +6,7 @@ import Home from './Pages/Home/Home.jsx';
 import Popup from './auth/PopUp.jsx';
 import Categories from './Pages/Categories/Categories.jsx';
 import BlogList from './Pages/Blogs/BlogList.jsx';
+import SingleBlog from './Pages/Blogs/SingleBlog.jsx';
 import SearchPopup from './Pages/PopUps/SearchPopup.jsx';
 
 function App() {
@@ -74,6 +75,7 @@ function App() {
           <Route path="/categories/:id" element={<Categories />} />
           <Route path="/sub-categories/:id" element={<BlogList />} />
           <Route path="/articles" element={<BlogList />} />
+          <Route path="/article/:id" element={<SingleBlog />} />
         </Routes>
         
         <Footer />

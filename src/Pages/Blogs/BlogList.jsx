@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { NEWS_API } from '../../api';
+import { Link } from 'react-router-dom';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import './BlogList.css';
 
@@ -58,13 +59,15 @@ const BlogList = () => {
           <div className="articles-container">
             {articles.map((article, index) => (
               <div className="article-card"  key={`${article.id}-${index}`}>
-                <img src={article.UrlToImage} alt={article.title} className="article-image" />
-                <div className="article-content">
-                  <p className="article-category">{article.category}</p>
-                  <h3 className="article-title">{article.title}</h3>
-                  <p className="article-author">By {article.author}</p>
-                  <p className="article-time red-color">{article.source} • {article.published_at_human}</p>
-                </div>
+                <Link to={`/article/${article.id}`} style={{ textDecoration: 'none' }}>
+                  <img src={article.UrlToImage} alt={article.title} className="article-image" />
+                  <div className="article-content">
+                    <p className="article-category">{article.category}</p>
+                    <h3 className="article-title">{article.title}</h3>
+                    <p className="article-author">By {article.author}</p>
+                    <p className="article-time red-color">{article.source} • {article.published_at_human}</p>
+                  </div>
+                </Link>
               </div>
             ))}
           </div>
