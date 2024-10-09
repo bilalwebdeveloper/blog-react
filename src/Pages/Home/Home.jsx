@@ -16,8 +16,8 @@ const Home = () => {
       const response = await NEWS_API.endpoints.Home.FetchCategoriesArticles(); 
 
       if (response.status === 200) {
-        console.log(response.data);
-        setNewsData(response.data); 
+        console.log(response.data.original);
+        setNewsData(response.data.original); 
       } else {
         console.error(`Failed: ${response.statusText}`);
       }
@@ -37,7 +37,7 @@ const Home = () => {
       const response = await NEWS_API.endpoints.Home.fetchFullArticle(); 
 
       if (response.status === 200) {
-        setSingleNews(response.data); 
+        setSingleNews(response.data.original); 
       } else {
         console.error(`Failed: ${response.statusText}`);
       }

@@ -8,7 +8,7 @@ const Footer = () => {
 
   const fetchMenu = async () => {
     try {
-      const response = await NEWS_API.endpoints.Commons.fetchMenu(4);
+      const response = await NEWS_API.endpoints.Commons.fetchFooterMenu();
 
       if (response.status === 200) {
         setMenuData(response.data);

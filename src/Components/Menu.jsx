@@ -9,7 +9,7 @@ const Menu = () => {
 
   const fetchMenu = async () => {
     try {
-      const response = await NEWS_API.endpoints.Commons.fetchMenu(5);
+      const response = await NEWS_API.endpoints.Commons.fetchHeaderMenu();
 
       if (response.status === 200) {
         setMenuData(response.data);

@@ -134,6 +134,8 @@ const PopUp = ({ isOpen, onClose, onLogin }) => {
         setMessage('Registration successful!');
         setSuccess(true);
         localStorage.setItem("token", response.data.data.token);
+        localStorage.setItem("username", response.data.data.name);
+        console.log(response.data.data);
       } else {
         setMessage('Registration failed. Please try again.');
         setSuccess(false);
@@ -146,6 +148,7 @@ const PopUp = ({ isOpen, onClose, onLogin }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(Object.keys(formErrors));
     if (Object.keys(formErrors).length === 0) {
       if (activeTab === 'login') {
         await handleLogin();

@@ -85,3 +85,100 @@
     color: #666;
   }
   
+  /* SearchPopup.css */
+.search-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.search-popup {
+  background: #fff;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.filter-input {
+  flex: 1 1 calc(33.33% - 10px); /* Adjusts width for three columns with a gap */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+.single-result {
+  list-style: none; /* Remove bullet points */
+  margin: 10px 0; /* Adjust margin as needed */
+}
+
+.result-link {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Center items vertically */
+  text-decoration: none; /* Remove default link styling */
+  color: inherit; /* Inherit color from parent */
+}
+
+.result-content {
+  display: flex; /* Use flexbox for content */
+  align-items: center; /* Center items vertically */
+}
+
+.result-image {
+  margin-right: 10px; /* Space between image and title */
+}
+
+.result-title {
+  margin: 0; /* Remove default margin */
+}
+
+
+/* Mobile-specific styles */
+@media (max-width: 600px) {
+  .filter-input {
+    flex: 1 1 100%; /* Stack inputs on top of each other */
+  }
+}
+
+.dropdown-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu li h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+}
