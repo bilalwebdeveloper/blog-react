@@ -18,6 +18,7 @@ const Header = ({ isLoggedIn, onLogout, onSignUp, onOpenSearch }) => {
         // Check if a token exists in local storage
         const token = localStorage.getItem('token');
         if (token) {
+          NEWS_API.init();
           const preferencesResponse = await NEWS_API.endpoints.Auth.fetchUser();
 
             // Assuming the response contains the user object with username and email
@@ -72,7 +73,7 @@ const Header = ({ isLoggedIn, onLogout, onSignUp, onOpenSearch }) => {
             )}
           </div>
         ) : (
-          <a href="#login" className="login" onClick={onSignUp}>Sign Up/Login</a>
+          <a href="#login" className="login" onClick={onSignUp}>Login</a>
         )}
         <button onClick={onOpenSearch} className="search-button">
           <FontAwesomeIcon icon={faSearch} />

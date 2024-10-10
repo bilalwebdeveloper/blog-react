@@ -221,8 +221,22 @@ header {
 .user-section {
   display: flex;
   align-items: center;
+  justify-content: space-between; 
 }
+@media (max-width: 768px) {
+  .user-section {
+      width: 100%; /* Make sure the container takes full width on mobile */
+      padding: 0 10px; /* Optional: add some padding for better spacing */
+  }
 
+  .login {
+      margin-right: auto; /* Ensures login stays on the left */
+  }
+
+  .search-button {
+      margin-left: auto; /* Ensures search button stays on the right */
+  }
+}
 .user-info {
   position: relative;
   cursor: pointer;
