@@ -27,7 +27,9 @@
     margin: 0;
     color: #333; /* Darker text color */
   }
-  
+  .Home {
+    overflow: hidden;
+  }
   .icon {
     font-size: 22px;
   }
