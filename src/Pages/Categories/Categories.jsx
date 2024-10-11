@@ -30,9 +30,9 @@ const Categories = () => {
     };
 
     if (id) {
-      fetchCategoriesArticles(); // Fetch data when `id` changes
+      fetchCategoriesArticles();
     }
-  }, [id]); // Dependency on `id`
+  }, [id]); 
 
   return (
     <div className="Category">
